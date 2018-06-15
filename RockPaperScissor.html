@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RockPaperScissor</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var me = prompt("What is your choice(rock,paper,scissor)");
+		var i = Math.floor((Math.random() * 3) +1);
+		var cpu;
+		if(i==1)
+		{
+			cpu = "rock"
+		}
+		else if(i==2)
+		{
+			cpu = "paper"
+		}
+		else{
+			cpu = "scissor"
+		}
+		function result(me,cpu)
+		{
+			if(me==cpu)
+			{
+				return "Do it again,It's a tie."
+			}
+			else if(me=="rock" && cpu=="paper")
+			{
+				return "You Lose,Cpu Wins.";
+			}
+			else if(me=="paper" && cpu=="scissor")
+			{
+				return "You Lose,Cpu Wins."
+			}
+			else if(me=="scissor" && cpu=="rock")
+			{
+				return "You Lose,Cpu Wins."
+			}
+			else if(me=="rock" && cpu=="scissor")
+			{
+				return "You Wins.";
+			}
+			else if(me=="paper" && cpu=="rock")
+			{
+				return "You Wins."
+			}
+			else if(me=="scissor" && cpu=="paper")
+			{
+				return "You Wins."
+			}
+		}
+		var res = result(me,cpu);
+		document.write("Cpu Choose:"+"<b>"+cpu+"</b>"+"<br>");
+		document.write("You Choose:"+"<b>"+me+"</b>"+"<br>");
+		document.write("<b>"+res+"</b>");
+	</script>
+</body>
+</html>
